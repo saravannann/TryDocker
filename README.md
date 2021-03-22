@@ -21,8 +21,8 @@ docker rm <container_name>
 #To run a new docker container instance
 docker run -it ubuntu bash
 
-docker run hello-world
-
+#This downloads from DockerHub
+`docker run hello-world`
 
 #To look into the container process
 docker top <container_name>
