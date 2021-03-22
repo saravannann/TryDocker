@@ -7,36 +7,37 @@
 `docker run -v /Users/s0e02l3/git/TryDocker/html:/usr/share/nginx/html:ro -p 8080:80 -d nginx`
 
 #To list the process running on docker
-docker ps -a
+`docker ps -a`
 
 #To list the docker images
-docker images
+`docker images`
 
 #To stop a docker container
-docker stop <container_name>
+`docker stop <container_name>`
 
 #To remove the container from docker
-docker rm <container_name>
+`docker rm <container_name>`
 
 #To run a new docker container instance
-docker run -it ubuntu bash
+`docker run -it ubuntu bash`
 
 #This downloads from DockerHub
 `docker run hello-world`
 
 #To look into the container process
-docker top <container_name>
+`docker top <container_name>`
 
 #To start the docker container running already 
-docker start --attach <container_name>
+`docker start --attach <container_name>`
 
 #To create docker image, follow below. 
 1. Create the Dockerfile, on what to do. 
 2. Sample file available in repo
 
 #To create the docker image
-docker build -t testnginx .  
-[+] Building 0.3s (7/7) FINISHED                                                                                                                                                                                                              
+`docker build -t testnginx .  `
+
+`[+] Building 0.3s (7/7) FINISHED                                                                                                                                                                                                              
  => [internal] load build definition from Dockerfile                                                                                                                                                                                     0.0s
  => => transferring dockerfile: 85B                                                                                                                                                                                                      0.0s
  => [internal] load .dockerignore                                                                                                                                                                                                        0.0s
@@ -50,7 +51,7 @@ docker build -t testnginx .
  => exporting to image                                                                                                                                                                                                                   0.0s
  => => exporting layers                                                                                                                                                                                                                  0.0s
  => => writing image sha256:50a1e93b75b497dfbf7ed6cc26b08aa545258e75628d307c0370b0e0fad8b8cc                                                                                                                                             0.0s
- => => naming to docker.io/library/testnginx   
+ => => naming to docker.io/library/testnginx   `
 
 #How to start containers for the created Docker Image
 docker run --name foo -d -p 8080:80 testnginx
