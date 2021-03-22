@@ -54,17 +54,16 @@
  => => naming to docker.io/library/testnginx   `
 
 #How to start containers for the created Docker Image
-docker run --name foo -d -p 8080:80 testnginx
+`docker run --name foo -d -p 8080:80 testnginx`
 
 #Refer to Example2 folder for another complicated example on another web server creation using python
-docker run --name webapp -p 8080:4000 mypyweb
+`docker run --name webapp -p 8080:4000 mypyweb`
 
 #How to Pass environment variable
-docker run --name webapp -p 8080:4000 -e NAME="Sara" -d mypyweb
+`docker run --name webapp -p 8080:4000 -e NAME="Sara" -d mypyweb`
 
 #How to add the image to Docker Hub
-docker tag mypyweb saravannann/sara_repo:1.00
-
+`docker tag mypyweb saravannann/sara_repo:1.00`
 
 #Push Docker image to DockerHub
-docker push saravannann/sara_repo:1.00
+`docker push saravannann/sara_repo:1.00`
