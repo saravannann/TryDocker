@@ -67,3 +67,43 @@
 
 #Push Docker image to DockerHub
 `docker push saravannann/sara_repo:1.00`
+
+#Stop all running containers
+`docker stop $(docker ps -a -q)`
+
+#Delete all existing images
+`docker image rm $(docker images -a -q)`
+
+#Delete specific image
+`docker image rm [image name]`
+
+#Delete all containers
+`docker rm $(docker ps -a -q)`
+
+#Display Logs of Container
+`docker logs [container name]`
+
+###########################
+#Docker-Compose
+
+#Build Docker-Compose
+
+`docker-compose build`
+
+#Run Docker-Compose
+
+`docker-compose up`
+
+
+#Bring down Docker-Compose
+`docker-compose down`
+
+#Logs for particular Service
+`docker-compose logs -f [service name]`
+
+#list the containers
+`docker-compose ps`
+
+#Executes command in running container
+`docker-compose exec [service name][command]`
+
